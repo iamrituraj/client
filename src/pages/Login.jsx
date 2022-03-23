@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import { useNavigate } from "react-router-dom";
-import { publicRequest } from "../requestMethods";
-import { loginFailure, loginStart, loginSuccess } from "../redux/userReducer";
+const CryptoJS = require("crypto-js");
+
 
 const Container = styled.div`
   width: 100%;
@@ -63,9 +63,14 @@ const Button = styled.button`
 const Link = styled.a`
   margin: 5px 0;
   font-size: 12px;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
+  color: black;
+  &:visited {
+    color: black;
+  }
 `;
+
 const Error = styled.span`
   color: red;
 `;
@@ -76,17 +81,15 @@ const Login = () => {
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
-  // const error = false;
-
-  
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
     const data = login(dispatch, { username, password });
-
+    
     data.then((result) => {
       console.log(result); 
-               console.log("login");
+      console.log("login");
       if (result.status === 200) {
       navigate("/");
       }
@@ -112,11 +115,11 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Input>
           <Button onClick={handleLogin} disabled={isFetching}>
-            LOGN IN
+            LOG IN
           </Button>
           {error && <Error>Something went Wrong .</Error>}
           <Link>FORGOT PASSWORD ?</Link>
-          <Link>CREATE A NEW ACCOUNT.</Link>
+          <Link href = "/register">CREATE A NEW ACCOUNT.</Link>
         </Form>
       </Wrapper>
     </Container>
