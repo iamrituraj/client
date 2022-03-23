@@ -1,6 +1,7 @@
 import { publicRequest } from "../requestMethods";
 import { loginFailure, loginStart, loginSuccess ,logOut} from "./userReducer"
 
+
 export const login = async (dispatch, user) =>{
     
     dispatch(loginStart());

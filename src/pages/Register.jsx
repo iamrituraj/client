@@ -82,6 +82,7 @@ const Register = () => {
         password,
         process.env.REACT_APP_PASS_SEC
       ).toString(),
+      // password
     };
 
     const res = await publicRequest.post("/auth/register", data);
