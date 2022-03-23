@@ -205,6 +205,7 @@ const Cart = () => {
       process.env.REACT_APP_PASS_SEC
     );
     const decrypted_amount = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+
     const options = {
       key: process.env.REACT_APP_RAZORPAY_KEY,
       amount: decrypted_amount,
@@ -263,10 +264,10 @@ const Cart = () => {
       alert("Razorpay sdk failed");
     }
     let text = cart.total;
-    const encrypt = CryptoJS.AES.encrypt(
-      text.toString(),
-      process.env.REACT_APP_PASS_SEC
-    ).toString();
+    // const encrypt = CryptoJS.AES.encrypt(
+    //   text.toString(),
+    //   process.env.REACT_APP_PASS_SEC
+    // ).toString();
 
     const TOKEN = `${user.currentUser.accessToken}`;
     try {
