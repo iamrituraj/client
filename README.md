@@ -1,5 +1,6 @@
 ## Note :
 The back-end of the project : https://github.com/iamrituraj/api
+| Live Server|[`Click here`](https://api.riturajrajput.repl.co/)| 
 
 ## f-KART ( E-Commerce Website)
 This is an E-commerce platform made by Rituraj Rajput. This web application is made using HTML5, CSS3, JavaScript, React.js, Ajax, Bootstrap, Redux, Styled- components as front-end and Node.js, Express.js as backend and MongoDB as database .For checkout i have used Razorpay payment Intgeration.
