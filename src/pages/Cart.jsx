@@ -317,7 +317,7 @@ const Cart = () => {
           <Info>
             {cart.products.length === 0 ? (
               <ImgContainer>
-                <Img src="https://collabkart.com/img/empty-cart.gif"></Img>
+                <Img src="https://shop.myfelt.com/skin/frontend/rwd/myfelt-2018/images/cart-noitem-mobile.gif"></Img>
               </ImgContainer>
             ) : (
               <></>
