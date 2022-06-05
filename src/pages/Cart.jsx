@@ -368,11 +368,15 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping:</SummaryItemText>
-              <SummaryItemPrice>₹ 100</SummaryItemPrice>
+              <SummaryItemPrice>
+                {cart.products.length === 0 ? "0" : "₹ 100"}
+              </SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount:</SummaryItemText>
-              <SummaryItemPrice>- ₹ 100</SummaryItemPrice>
+              <SummaryItemPrice>
+                {cart.products.length === 0 ? "0" : " - ₹ 100"}
+              </SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total:</SummaryItemText>
