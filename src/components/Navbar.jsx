@@ -137,7 +137,7 @@ const Navbar = () => {
         </Left>
         <Center>
           <Logo>
-            <Link href="/">f-KART</Link>
+            <Link href="/">R-kart</Link>
           </Logo>
         </Center>
         <Right>

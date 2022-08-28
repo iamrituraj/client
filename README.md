@@ -5,7 +5,7 @@ The back-end of the project : https://github.com/iamrituraj/api
 ## f-KART ( E-Commerce Website)
 This is an E-commerce platform made by Rituraj Rajput. This web application is made using HTML5, CSS3, JavaScript, React.js, Ajax, Bootstrap, Redux, Styled- components as front-end and Node.js, Express.js as backend and MongoDB as database .For checkout i have used Razorpay payment Intgeration.
 
-A deployed version can be checked here :  https://f-kart.riturajrajput.repl.co/
+A deployed version can be checked here :  https://r-kart.vercel.app/
 
 ## Front-end:
 Login using JWT authentication, different product categories, you can view various products, filter
@@ -27,7 +27,7 @@ using JWT)
 ## Deployment:
 For Deployment, we have used `Replit` as a platform. 
 
-| Live Project|[`Click here`](https://f-kart.riturajrajput.repl.co/)| 
+| Live Project|[`Click here`](https://r-kart.vercel.app/)| 
 
 ## CI/CD setup
 1. Create a GitHub repository. You may initialize it with a README, license, .gitignore
