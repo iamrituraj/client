@@ -93,7 +93,7 @@ const Footer = () => {
     <Container>
       <Left>
         <Logo>
-          <Link href="/">R-kart.</Link>
+          <Link href="/">Fashion Atelier.</Link>
         </Logo>
         <Desc>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
