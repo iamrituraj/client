@@ -80,7 +80,7 @@ const Register = () => {
       email,
       password: CryptoJS.AES.encrypt(
         password,
-        process.env.REACT_APP_PASS_SEC
+        "redmi_note_7s"
       ).toString(),
       // password
     };
