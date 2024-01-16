@@ -11,10 +11,6 @@ import { useNavigate } from "react-router-dom";
 import { emptyCart } from "../redux/cartRedux";
 const CryptoJS = require("crypto-js");
 
-const KEY = process.env.REACT_APP_STRIPE;
-
-console.log(KEY);
-
 const Container = styled.div`
   overflow: hidden;
 `;
@@ -202,12 +198,12 @@ const Cart = () => {
 
     const bytes = CryptoJS.AES.decrypt(
       pay_request.amount,
-      process.env.REACT_APP_PASS_SEC
+      "redmi_note_7s"
     );
     const decrypted_amount = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
     const options = {
-      key: process.env.REACT_APP_RAZORPAY_KEY,
+      key: "rzp_test_eNbomuQxV8wGqM",
       amount: decrypted_amount,
       currency: pay_request.currency,
       name: "f-KART",
@@ -273,10 +269,8 @@ const Cart = () => {
     try {
       const encrypt = CryptoJS.AES.encrypt(
         text.toString(),
-        process.env.REACT_APP_PASS_SEC
+        "redmi_note_7s"
       ).toString();
-
-      console.log(encrypt, process.env.REACT_APP_PASS_SEC);
 
       const response = await publicRequest.post(
         "/checkout/payment",
